@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>看球吧 · 赛事信息导航站</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 4rem;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+      color: #0f172a;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 2.2rem;
+      border-left: 4px solid #3b82f6;
+      padding-left: 1rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 2rem 0 0.8rem;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 18px;
+      background: #3b82f6;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+      color: #334155;
+    }
+
+    .highlight-note {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-item {
+      background: white;
+      border: 1px solid #e9edf2;
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .feature-item:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .feature-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .insight-callout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.25rem 0.5rem;
+      background: white;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem 1.4rem;
+      border-radius: 0 10px 10px 0;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+    }
+
+    .insight-callout strong {
+      color: #0f172a;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: #2563eb;
+    }
+
+    .faq-compact {
+      margin: 2rem 0 0.8rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 2rem 1rem 3rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .subhead {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>看球吧 · 赛事信息聚合</h1>
+  <div class="subhead">快速定位赛程、比分与实时动态 — 面向观赛者的轻量导航</div>
+
+  <p>对许多用户而言，打开一个体育信息站最直接的需求是：<strong>「今天有哪些比赛？比分是多少？哪里能看到？」</strong>。
+  <a href="https://cnwebs-kanqiu8.com">看球吧</a> 正是围绕这一核心场景设计的信息入口，它不制造内容，而是将分散的赛事数据、直播源索引与社区讨论做结构化整合，减少用户在不同页面之间跳转的消耗。</p>
+
+  <div class="highlight-note">
+    <strong>一句话概括：</strong>如果你需要一个能快速扫一眼当天赛程、确认比赛状态、并找到可用直播路径的起点，<a href="https://cnwebs-kanqiu8.com">看球吧</a> 提供的是一种克制且直接的工具性体验。
+  </div>
+
+  <h2>核心功能特征</h2>
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="feature-title">赛程时间线</div>
+      <div class="feature-desc">按联赛、日期、球队维度聚合，关键比赛用标签标注（焦点战、决赛、德比等），支持快速筛选今日、明日或当周赛事。</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">实时比分与状态</div>
+      <div class="feature-desc">比赛进行中自动刷新比分，同步显示红黄牌、换人、进球事件等摘要，无需频繁刷新页面即可掌握节奏变化。</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">直播源索引</div>
+      <div class="feature-desc">收录经过人工校验的可用直播链接（含官方网站、授权平台及部分公共信号），每个源均标注清晰度和语言，用户可自行选择。</div>
+    </div>
+  </div>
+
+  <h2>使用建议</h2>
+  <p>建议将 <a href="https://cnwebs-kanqiu8.com">看球吧</a> 作为 <strong>「查赛程 → 看比分 → 选直播」</strong> 的起点工具。日常观赛前，先花 30 秒浏览时间线确认比赛时间与频道；赛中若需快速核对进球或换人细节，比分模块比社交媒体的零散信息更可靠。对于多场比赛同时进行的周末，其列表式布局能极大降低信息遗漏风险。</p>
+
+  <div class="insight-callout">
+    <strong>适用场景举例：</strong>
+    <span>下班路上快速确认今晚欧冠赛程</span>
+    <span>·</span>
+    <span>周末打开手机查看五大联赛实时进球</span>
+    <span>·</span>
+    <span>寻找某场非热门联赛的可用直播入口</span>
+  </div>
+
+  <h2>可信但克制的说明</h2>
+  <p><a href="https://cnwebs-kanqiu8.com">看球吧</a> 本身不托管任何比赛视频流或盗播内容，也不提供赌球、博彩类引导。其直播源索引部分仅汇总已公开的合法信号（如 YouTube 官方频道、联赛授权平台试用链接等），并对失效链接做定期清理。用户通过该站访问第三方平台时，应自行遵守各平台的使用条款与版权规定。</p>
+
+  <div class="faq-compact">
+    <div class="faq-item">
+      <div class="faq-q">Q：是否需要注册或付费？</div>
+      <div class="faq-a">不需要注册，所有赛程查询与比分查看功能免费开放。直播源本身可能要求用户持有对应平台会员或账号，但看球吧不做任何强制跳转或付费收集。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：数据更新频率如何？</div>
+      <div class="faq-a">赛程数据每日同步官方联赛排期，比分模块在比赛进行期间每 30–60 秒刷新一次事件状态。极少数低级别联赛可能存在延迟，建议以联赛官方数据为准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：对移动设备适配如何？</div>
+      <div class="faq-a">页面采用响应式布局，手机浏览器与平板均能获得完整功能。推荐使用 Safari 或 Chrome 最新版本以获得最佳排版效果。</div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-note">
+    看球吧 — 简洁 · 中立 · 以观赛体验为中心的信息导航
+  </div>
+
+</div>
+</body>
+</html>
